@@ -1,40 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Sacramento&display=swap"
+      rel="stylesheet"/>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Coding Magic</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <div class="logo-img"><img src="./image/logo.png" alt="logo"></div>
-            <div class="logo-text">Coding <span class="logo-text-span"> Magic</span></div>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li class="menu-item">Інтерактив</li>
-                <li class="menu-item">Наша команда</li>
-                <li class="menu-item">Контакти</li>
-            </ul>
-        </nav>
-        <div class="settings">
-            <div class="settings-thema"></div>
-            <div class="settings-user">Вітаємо, <span class="user-name"> User!</span></div>
-        </div>
+      <div class="logo">
+        <div class="logo-img"><img src="./image/logo.png" alt="Coding-Magic-Logo" /></div>
+        <div class="logo-text">
+          <div class="text-one">Coding</div>
+          <div class="text-two">Magic</div>
+      </div>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li class="menu-item"><a class="menu-item-link" href="">Інтерактив</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="">Наша команда</a></li>
+          <li class="menu-item"><a class="menu-item-link" href="">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="settings">
+        <div class="settings-thema"></div>
+        <div class="settings-user">Вітаємо, <span class="user-name">User</span> !</div>
+      </div>
     </header>
 
-    <main class="main">
+    <div class="block">
+      <main class="main">
+        <div class="container">
+            <h1 class="title">Популярні ітерактивні ігри</h1>
+            <ul class="games-list">
+
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Перевір в який рік ти народився</h2>
+                <div class="games-list-item-play year">
+                  <div class="year-cont">
+                    <input class="year-inp" type="text" placeholder="Введіть рік народження">
+                    <button class="year-btn"><img src="/image/Group 104.png" alt="search"></button>
+                  </div>
+                  <p class="year-text">Ви народилися у високосний рік!</p>
+                </div></li>
+                
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Вгадай число, яке загадав комп’ютер</h2>
+                <div class="games-list-item-play number">
+                  <div class="number-cont">
+                    <input class="number-inp" type="text" placeholder="Введіть число">
+                    <button class="number-btn"><img src="/image/Group 104.png" alt="search"></button>
+                  </div>
+                  <p class="number-text">Вітаю, ви вгадали число! (number) </p>
+                </div></li>
+
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Камінь - ножиці - папір</h2>
+                <div class="games-list-item-play rsp">
+                  <div class="rsp-cont">
+                    <ul class="rsp-list">
+                      <li class="rsp-list-item">
+                        <button class="rock"><img src="/image/stone 1.svg" alt="rock"></button>
+                      </li>
+                      <li class="rsp-list-item">
+                        <button class="scissors"><img src="/image/scissors 1.svg" alt="scissors"></button>
+                      </li>
+                      <li class="rsp-list-item">
+                        <button class="paper"><img src="/image/paper 1.svg" alt="paper"></button>
+                      </li>
+                    </ul>
+                    <ul class="rsp-score-list">
+                      <li class="rsp-score-item">
+                        <p class="score">Рахунок: </p>
+                      </li>
+                      <li class="rsp-score-item">
+                        <p class="computer">Комп’ютер - <span>0</span></p>
+                      </li>
+                      <li class="rsp-score-item">
+                        <p class="you"> Ви - <span>0</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rsp-variant">
+                    <p class="variant-text">Ви виграли раунд!</p>
+                    <button class="variant-btn">Варіант комп’ютера</button>
+                  </div>
+
+                </div></li>
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Калькулятор</h2>
+                <div class="games-list-item-play calc">
+                    <ul class="calc-list">
+                      <li class="calc-list-item">
+                        <input type="text" name="" id="" placeholder="Введіть число">
+                      </li>
+                      <li class="calc-list-item">
+                        <ul class="symbol-list">
+                          <li class="symbol-list-item">+</li>
+                          <li class="symbol-list-item">-</li>
+                          <li class="symbol-list-item">*</li>
+                          <li class="symbol-list-item">/</li>
+                        </ul>
+                      </li>
+                      <li class="calc-list-item">
+                        <input type="text" name="" id="" placeholder="Введіть число">
+                      </li>
+                      <li class="calc-list-item">
+                        <button class="result">=</button>
+                      </li>
+                      <li class="calc-list-item">
+                        <input type="text" name="" id="" placeholder="Результат">
+                      </li>
+                    </ul>
+                </div></li>
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Калькулятор часу</h2>
+                <div class="games-list-item-play time-calc">
+                  <div class="calc-cont">
+                    <input class="calc-inp" type="text" placeholder="Введіть число">
+                    <button class="calc-btn"><img src="/image/Group 104.png" alt="search"></button>
+                  </div>
+                  <p class="calc-space"></p>
+                  <p class="calc-text">3 дн. 15:45:01</p>
+                </div></li>
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Google динозавр</h2>
+                <div class="games-list-item-play dino">
+                  
+                </div></li>
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Футбол</h2>
+                <div class="games-list-item-play football">
+                  
+                </div></li>
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Введіть 3 числа</h2>
+                <div class="games-list-item-play three-num">
+                  <ul class="three-num-list">
+                    <li class="three-num-list-item">
+                      <input type="text" name="" id="" placeholder="Введіть число">
+                    </li>
+                    <li class="three-num-list-item">
+                      <input type="text" name="" id="" placeholder="Введіть число">
+                    </li>
+                    <li class="three-num-list-item">
+                      <input type="text" name="" id="" placeholder="Введіть число">
+                    </li>
+                  </ul>
+                  <p class="large-num">Найбільше число, яке ви ввели -   <span class="large-num-text"></span> </p>
+                </div>
+              </li>
+
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Наша команда</h2>
+                <div class="games-list-item-play team">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div></li>
+
+                <li class="games-list-item">
+                    <h2 class="games-list-item-name">Обери вченого/их</h2>
+                <div class="games-list-item-play science">
+                 <ul class="science-list">
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                  <li class="science-list-item"></li>
+                 </ul>
+                 <ul class="question-list">
+                  <li class="question-list-item">Які вчені народилися в 19 ст.</li>
+                  <li class="question-list-item">Знайти рік народження Albert Einshtein</li>
+                  <li class="question-list-item">Відсортувати вчених за алфавітом</li>
+                  <li class="question-list-item">Знайти вчених, прізвища яких починаються на на літеру “С” </li>
+                  <li class="question-list-item">Відсортувати вчених за кількістю прожитих років</li>
+                  <li class="question-list-item">Видалити всіх вчених, ім’я яких починається на “А”</li>
+                  <li class="question-list-item">Знайти вченого, який народився найпізніше</li>
+                  <li class="question-list-item">Знайти вченого, який прожив найдовше і вченого, 
+                    який прожив найменше</li>
+                  <li class="question-list-item">Знайти вчених, в яких співпадають перші літери імені і прізвища</li>
+                 </ul>
+                </div></li>
+            </ul>
+        </div>
     </main>
-            
+
     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="footer-logo-img"><img src="./image/logo.png" alt="logo" /></div>
+                <div class="footer-logo-text">
+                  <div class="footer-text-one">Coding</div>
+                  <div class="footer-text-two">Magic</div>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li class="footer-list-item">Тел: +38 (123) 456 78 90</li>
+                <li class="footer-list-item">E-Mail: codingmagic@gmail.com</li>
+                <li class="footer-list-item">Facebook: CodingMagic</li>
+                <li class="footer-list-item">Twitter: CodingMagic</li>
+                <li class="footer-list-item">Instagram: CodingMagic</li>
+            </ul>
+            <div class="sub">
+                <input class="sub-text" type="text" placeholder="Ваша ел. адреса...">
+                <button class="sub-button">Підписатись</button>
+                <p class="sub-info">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
+            </div>
+        </div>
     </footer>
-</body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/main.js"></script>
+  </body>
 </html>
