@@ -1,6 +1,141 @@
 :root{
   --main: #fff;
 }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 *,
 *::before,
@@ -30,6 +165,29 @@ input {
   font-family: inherit;
   margin: 0px;
   padding: 0px;
+}
+
+.inp{
+  background-color: #D7D7D7;
+  color: #7E7E7E;
+  border-radius: 20px;
+  border-style: none;
+  font-size: 12px;
+  line-height: 14.63px;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+}
+.btn{
+  border-radius: 20px;
+  background: #000;
+  color: #FFF;
+  border-style: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.cont{
+  position: relative;
+  display: flex;
 }
 
 body{
@@ -138,58 +296,163 @@ body{
 .year-cont {
   margin-right: 149px;
 }
-
 .year-inp {
-  padding: 10px 45px 10px 10px;
-  background-color: #D7D7D7;
-  color: #7E7E7E; 
-  border-radius: 20px;
-  border-style: none;
-  font-size: 12px;
-
+  padding: 10px 45px 10px 10px ;
+  width: 215px;
 }
-
 .year-btn {
   border-radius: 0px 20px 20px 0px;
-  background: #000;
-  border-style: none  ;
   height: 35px;
   width: 35px;
+  position: absolute;
+  right: 0;
 }
-.year-text {}
-
+.year-text {
+  color: #039900;
+  text-align: right;
+  font-size: 12px;
+}
 .number {
 }
 .number-cont {
+  margin-right: 202px;
 }
 .number-inp {
-}
+  padding: 10px 45px 10px 10px;
+  width: 150px;
+  }
 .number-btn {
+  border-radius: 0px 20px 20px 0px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 0;
 }
 .number-text {
+  color: #039900;
+  text-align: right;
+  font-size: 12px;
 }
-
 .rsp {
   display: flex;
   flex-direction: column;
 }
 .rsp-cont {
+  margin-bottom: 36px;
   display: flex;
+  justify-content: end;
 }
 .rsp-list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  column-gap: 38px;
+
+  margin-right: 104px;
+}
+.rsp-list-item {
+}
+.rsp-btn{
+  padding: 10px;
+}
+.rsp-btn>img{
+  width: 40px;
+  height: 40px;
+}
+.rock {
+}
+.scissors {
+}
+.paper {
+}
+.rsp-score-list {
+  font-size: 12px;
+  line-height: 170%;
+}
+.rsp-score-item {
+}
+.score {
+}
+.computer {
+}
+.you {
+}
+.rsp-variant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.variant-text {
+  margin-bottom: 36px;
+  font-size: 12px;
+  color: #039900;
+}
+.variant-btn {
+  padding: 10px 20px;
+  color: #fff;
 }
 .calc {
 }
 .calc-list {
   display: flex;
   align-items: center;
+
+  column-gap: 38px;
+}
+.cacl-inp{
+  padding: 10px 20px;
+  width: 135px;
+}
+.calc-list-item {
 }
 .symbol-list {
-  columns: 2;
+  display: flex;
+  width: 60px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
+.symbol-list-item {
+  padding: 5px 10px;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  line-height: 14.63px;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+}
+.symbol-list-item:active{
+  background-color: #7E7E7E;
+  color: #000;
+}
+/* .result {
+  padding: 5px 10px;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  line-height: 14.63px;
+} */
 .time-calc {
+}
+.time-calc-cont {
+  margin-right: 166px;
+}
+.time-calc-inp {
+  padding: 10px 45px 10px 10px;
+  width: 150px;
+}
+.time-calc-btn {
+  border-radius: 0px 20px 20px 0px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 0;
+}
+.time-calc-space {
+}
+.time-calc-text {
+  font-size: 12px;
 }
 .dino {
 }
@@ -201,34 +464,99 @@ body{
 }
 .three-num-list {
   display: flex;
+  column-gap: 38px;
+}
+.three-num-list-item {
+  margin-bottom: 36px;
+}
+.three-num-inp{
+  padding: 10px 20px;
+  width: 135px;
+}
+.large-num {
+}
+.large-num-text {
 }
 .team {
 }
 .science {
+  display: flex;
+  flex-direction: column;
 }
 .science-list {
-  columns: 4;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 59px;
+  row-gap: 36px;
+  width: 577px;
+  margin-bottom: 46px;
 }
 .science-list-item {
   background-color: grey;
   width: 100px;
   height: 100px;
   border-radius: 20px;
-  margin-bottom: 10px;
+}
+.question-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 36px;
+  color: #FFF;
+}
+.question-one {
+  text-align: end;
+}
+.question-two {
+  text-align: start;
+}
+.question-item {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  line-height: 14.63px;
+  font-size: 12px;
 }
 .footer {
+  display: flex;
+  justify-content: center;
+  background-color: #FFF;
+  column-gap: 185px;
+  padding-top: 61px;
+  padding-bottom: 59px;
 }
 .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 170%;
+  column-gap: 185px;
 }
 .footer-logo {
+  display: flex;
 }
 .footer-logo-img{
 }
+
+.footer-logo-img>img{
+  height: 70px;
+}
+
 .footer-logo-text{
 }
 .footer-text-one{
+  font-size: 23px;
+
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 .footer-text-two{
+  font-family: 'Sacramento';
+  font-size: 25px;
+  text-align: end;
 }
 .footer-list {
 }
@@ -237,16 +565,29 @@ body{
 .sub {
 }
 .sub-text {
+  padding: 10px 80px 10px 10px;
+  margin-right: 36px;
 }
-.sub-button {
+.sub-btn {
+  padding: 10px;
+  color: #FFF;
+  font-size: 12px;
 }
 .sub-info {
-}
-.swiper {
-  width: 100%;
-  height: 600px;
+  font-size: 6px;
 }
 
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper {
+}
+.swiper-wrapper {
+  width: 315px ;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -255,16 +596,29 @@ body{
   justify-content: center;
   align-items: center;
 
-  background-color: grey;
+  padding-bottom: 40px;
+}
+.swiper-slide img {
+  margin: 0 auto;
+  display: block;
   width: 150px;
   height: 150px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  border-radius: 20px;
+
+  margin-bottom: 20px;
+}
+.sw-title{
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+.sw-text{
+  font-size: 12px;
+}
+.swiper-button-next {
+}
+.swiper-button-prev {
+}
+.swiper-pagination {
 }
